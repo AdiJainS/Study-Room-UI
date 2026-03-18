@@ -1,5 +1,5 @@
 # Bookuroom Study Room Booking UI
-Click this to go to the website
+Click this to go to the website[Bookuroom](https://bookuroom.netlify.app/)
 
 A simple and interactive Study Room Booking Web App built using React.js. Users can view available rooms, check time slots, and even add custom booking slots dynamically.
 
@@ -84,8 +84,44 @@ const handleAddSlot = () => {
     setEndTime("");
   }
   ```
-This new slot logic prevents input of invalid time , also it checks duplicate slots .
+This new slot logic prevents input of invalid time , also it checks duplicate slots ,details of the room etc.
 
-We then created room container , which contains image of the room 
-  
+We then created room container , which contains image of the room .
+
+### App.jsx
+
+After importing all the necessary things , we triggered re-rendere again . 
+```
+const refresh = () => {
+  setUpdate((u) => u + 1);
+};
+```
+By this , everytime refresh is called , update changes and rerednering happens.
+
+Filters are also setup for people and accn to room type (for example if a person choses 5 , then Study room for 4 will not be shown) , room type. Also reset booking feature is added. 
+Slot creation logic was shifted in room so that design can be better.
+
+Appropriate conditions  of filter , room types are set. Options are created for room types using dropdowns, and a reset button is also created , rooms are rendered etc.
+
+```
+onChange={(e) => setRoomType(e.target.value)}
+```
+here e -- > event object
+.target -- > select element
+.value -- > option selected
+
+# Improvements 
+1.User authentication
+
+2.Backend
+
+3.Calender , proper dashboard , report options etc.
+
+#Author
+Developed by Adi Jain
+
+#License
+This project is open-source and available under the MIT License.
+
+
 
