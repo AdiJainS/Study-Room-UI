@@ -34,7 +34,7 @@ BookingManager.jsx :
 
 This ensures booking and no double hooks are made . It also handles local storage ( ie booking is stored after refresh).
 
-getBookings() {
+```getBookings() {
     return JSON.parse(localStorage.getItem("bookings")) || {}; // return empty object if no booking
 },
   saveBookings(bookings) {
@@ -43,6 +43,6 @@ getBookings() {
   isBooked(room_Id, slot) {
     const bookings = this.getBookings();
     return bookings[`${room_Id}-${slot}`];
-},  
+},  ```
 
 This code block helps to get the booking by converting the string to object (JSON.parse), then saving the booking by converting it to object to string (JSON.stringify) , and then checking if a particular slot is booked already.
