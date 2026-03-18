@@ -110,6 +110,7 @@ here e -- > event object
 .target -- > select element
 .value -- > option selected
 
+
 # Improvements 
 1.User authentication
 
@@ -117,10 +118,11 @@ here e -- > event object
 
 3.Calender , proper dashboard , report options etc.
 
-#Author
+
+# Author
 Developed by Adi Jain
 
-#License
+# License
 This project is open-source and available under the MIT License.
 
 
