@@ -1,33 +1,48 @@
 # Bookuroom Study Room Booking UI
+Click this to go to the website
 
 A simple and interactive Study Room Booking Web App built using React.js. Users can view available rooms, check time slots, and even add custom booking slots dynamically.
 
-# 🚀 Features
+#  Features
 
-🏢 View multiple study rooms with:
+View multiple study rooms with:
 
-Name
+Name , Capacity,Type (Group Study, Discussion, Meeting),Room images,Predefined time slots for each room,Add custom time slots for individual rooms
 
-Capacity
+Prevent:
 
-Type (Group Study, Discussion, Meeting)
+Invalid time entries,Duplicate slots
 
-Room images
+Filter rooms based on:
+Number of people,Room type
 
-⏰ Predefined time slots for each room
+Clean and responsive UI
 
-➕ Add custom time slots for individual rooms
+# Tech Stack
 
-🚫 Prevent:
+Frontend: React.js
 
-Invalid time entries
+Styling: CSS
 
-Duplicate slots
+State Management: React Hooks (useState)
 
-👥 Filter rooms based on:
+# Working and Building of this project
 
-Number of people
+Here we will go file by file to understand working of all the components which helped in making of the site.
 
-Room type
+BookingManager.jsx :
 
-🎨 Clean and responsive UI
+This ensures booking and no double hooks are made . It also handles local storage ( ie booking is stored after refresh).
+
+getBookings() {
+    return JSON.parse(localStorage.getItem("bookings")) || {}; // return empty object if no booking
+},
+  saveBookings(bookings) {
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+},
+  isBooked(room_Id, slot) {
+    const bookings = this.getBookings();
+    return bookings[`${room_Id}-${slot}`];
+},  
+
+This code block helps to get the booking by converting the string to object (JSON.parse), then saving the booking by converting it to object to string (JSON.stringify) , and then checking if a particular slot is booked already.
