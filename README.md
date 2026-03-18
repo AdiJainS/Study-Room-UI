@@ -1,5 +1,5 @@
 # Bookuroom Study Room Booking UI
-Click this to go to the website[Bookuroom](https://bookuroom.netlify.app/)
+Website Link : [Bookuroom](https://bookuroom.netlify.app/)
 
 A simple and interactive Study Room Booking Web App built using React.js. Users can view available rooms, check time slots, and even add custom booking slots dynamically.
 
