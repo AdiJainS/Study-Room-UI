@@ -24,7 +24,7 @@ Frontend: React.js
 
 Styling: CSS
 
-State Management: React Hooks (useState)
+State Management: React Hooks 
 
 # Working and Building of this project
 
